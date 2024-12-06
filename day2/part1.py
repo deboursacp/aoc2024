@@ -1,5 +1,5 @@
-# with open('example_input.txt') as f:
-with open("part1_input.txt") as f:
+# with open('ex.txt') as f:
+with open("in.txt") as f:
     reports = f.readlines()
 
 

@@ -2,7 +2,7 @@ import re
 
 MUL_REGEX_PATTERN = "(mul\(\d{1,3},\d{1,3}\))"
 
-with open("part1_input.txt") as f:
+with open("in.txt") as f:
     lines = f.readlines()
 
 

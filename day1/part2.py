@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 ls, rs = defaultdict(int), defaultdict(int)
-with open("part1_input.txt") as f:
+with open("in.txt") as f:
     for line in f.readlines():
         l, r = map(int, line.strip().split("   "))
         ls[l] += 1
