@@ -51,3 +51,7 @@ for i in MAP.keys():
         modified_map[i][j] = "#"
         num_looped += is_infinite_path(STARTING_POSITION, modified_map)
 print(num_looped)
+
+# Insight i missed to avoid brute forcing:
+# Instead of putting an obstacle in each location, you only need to put one on each location of the original path.
+# Though, this would maybe cut the complexity down to 1/4th (~4k positions instead of ~16k)
