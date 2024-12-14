@@ -1,0 +1,102 @@
+A = 4
+======
+AA = 4
+======
+AAA = 4
+
+AA
+A   = 6
+======
+AA       22
+AA = 4   22
+
+AAAA = 4  1221
+
+AAA       221
+A    = 6  1
+
+AAA       131
+ A  = 8    1
+
+======
+AAAAA = 4
+
+AAAA
+A     = 6
+
+AAA          221
+AA    = 6    22
+
+AAA         222
+A A   = 8   1 1
+
+ A            1
+AAA          141
+ A   = 12     1
+
+A
+AAA
+A     = 8
+You CANNOT do it purely based on adjacency counts without regard for location/orientation
+221  <> 1221
+1
+==========
+6    <> 4
+
+Turtle traversing also becomes hard when there are holes. How would you detect holes?
+
+Add blocks until you're a rectangle, and keep track of the type of addition?
+
+The rectangle will be the bounding rectangle
+
+AA
+ X
+
+AX
+AA
+
+AXA
+AAA
+
+AAA
+AXA
+AAA
+
+---
+
+AAAA
+A     = 6
+
+0 = empty space within the bounding box
+X = plot we're adding
+A = occupied plot
+AAAA
+AX00  <touching 2A, 1x0, 1xB>
+
+AAAA
+AAX0  <touching 2A, 1x0, 1xB>  -> +0 (just extending an edge)
+
+AAAA
+AAAX  <touching 2A, 0x0>  0> +2
+
+---
+AAA       131
+0A0 = 8    1   (2xA = 1x0 works)
+
+AAA
+A0A
+AAA  = 8   4xA -> + 4
+
+AAA
+AXA
+A0A
+AAA  = 8   3x1+1x0 -> +0
+
+
+--
+ -
+-
+(0,0), (0,1)
+     , (1,1)
+(2,0)
+horizontal, so merge if (0, +/-1)
